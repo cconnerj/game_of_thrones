@@ -1,0 +1,13 @@
+<h1>Edit House</h1>
+
+<%= form_for @house do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
+  <%= f.submit "Update House" %>
+<%end%>
+
+<%= link_to 'Delete!', house_path(@house), method: :delete, class: 'delete' %>
