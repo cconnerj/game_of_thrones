@@ -13,7 +13,7 @@ def new
 end
 
 def create
-  @house = House.find(params[:id])
+  @house = House.find(params[:house_id])
   @character = @house.characters.create (character_params)
   redirect_to @character
 end
@@ -24,7 +24,7 @@ def edit
 end
 
 def update
-  @house = House.find(params[:id])
+  @house = House.find(params[:house_id])
   @character = @house.characters.find(params[:id])
   @character.update(character_params)
   redirect_to @character
